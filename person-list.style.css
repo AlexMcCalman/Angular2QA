@@ -1,0 +1,11 @@
+li {
+	color: black;
+}
+
+li:hover {
+	color: blue;
+}
+
+span {
+	font-style: normal;
+}

@@ -1,0 +1,15 @@
+<h2>Refined List</h2>
+<div>
+	<span>Refine the list by searching:</span> <br>
+	<input type="text" [(ngModel)]="searchFilter" placeholder="Search">
+</div>
+<div align="center" *ngIf="selectedPerson">
+	<p>Fact about {{ selectedPerson.name }}: {{ selectedPerson.fact }}</p>
+	<p>Change fact: <input type="text" [(ngModel)]="selectedPerson.fact"></p>
+</div>
+<ul>
+	<li *ngFor="let person of people | filterPipe: searchFilter" (click)="goToDetail(person)">
+		ID: {{ person.id }}, <br>
+		Name: {{ person.name }}
+	</li>
+</ul>

@@ -1,0 +1,17 @@
+<div>
+	<h2>Add a Person</h2>
+	<div>
+		<label>Name:</label>
+		<input type="text" name="name" [(ngModel)]="newName">
+	</div>
+	<div>
+		<label>Fact:</label>
+		<input type="text" name="fact" [(ngModel)]="newFact">
+	</div>
+	<div>
+		<button (click)="addPerson(newName, newFact)">Add</button>
+	</div>
+	<div>
+		<p>{{ latestPerson() }}</p>
+	</div>
+</div>

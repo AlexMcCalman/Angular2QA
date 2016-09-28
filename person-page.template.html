@@ -1,0 +1,12 @@
+<h2>Full List</h2>
+<span>Click on a person for more information, or enter an ID:</span>
+<div>
+	<input type="number" [(ngModel)]="searchId" placeholder="ID">
+	<button (click)="findButtonClicked(searchId)">Find</button>
+</div>
+<ul>
+	<li *ngFor="let person of people" (click)="goToDetail(person)">
+		ID: {{ person.id }}, <br>
+		Name: {{ person.name }}
+	</li>
+</ul>
